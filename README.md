@@ -3,7 +3,8 @@
 
 ShopWave is a cutting-edge, modern e-commerce platform built with an engaging 3D user interface, smooth animations, and a robust backend.
 
-![E-Commerce Store - Google Chrome 2026-04-09 23-55-17](https://github.com/user-attachments/assets/36c0dcad-258e-4f30-b1ad-8758da122b9d)
+![E-Commerce Store - Google Chrome 2026-04-09 23-55-17](https://github.com/user-attachments/assets/383fbf23-eb42-4721-8613-bb2836bda47a)
+
 
 
 
