@@ -80,7 +80,29 @@ ShopWave is a cutting-edge, modern e-commerce platform built with an engaging 3D
 
 
 
+
+![Microsoft Game DVR - Microsoft Game DVR - Microsoft Game DVR - E-Commerce Store - Google Chrome - VLC media player - VLC media player - VLC media player 2026-04-10 18-48-16](https://github.com/user-attachments/assets/795f974d-18d3-40cd-8f78-8676792f1ff8)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ![ecom6](https://github.com/user-attachments/assets/32ababe9-eef8-4767-9641-3a2956624e77)
+
+
+
+
+
 
 
 
