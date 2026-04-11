@@ -1,28 +1,8 @@
-# ShopWave-e-com-site
 # ShopWave
 
 ShopWave is a cutting-edge, modern e-commerce platform built with an engaging 3D user interface, smooth animations, and a robust backend.
 
 ![E-Commerce Store - Google Chrome 2026-04-09 23-55-17](https://github.com/user-attachments/assets/383fbf23-eb42-4721-8613-bb2836bda47a)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 🚀 Features
 
@@ -33,116 +13,15 @@ ShopWave is a cutting-edge, modern e-commerce platform built with an engaging 3D
 
 ![ecom4](https://github.com/user-attachments/assets/c6584aa4-d29a-4d17-8a6c-8a6714569a96)
 
-
-
-
-
-
-
-
-
-
-
-
-
 ![ecom5](https://github.com/user-attachments/assets/03704961-6084-46c6-8916-a6d240eee7da)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ![ecom8](https://github.com/user-attachments/assets/ade9a241-2a68-4253-8c2f-f4e6173d5451)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![Microsoft Game DVR - Microsoft Game DVR - Microsoft Game DVR - E-Commerce Store - Google Chrome - VLC media player - VLC media player - VLC media player 2026-04-10 18-48-16](https://github.com/user-attachments/assets/795f974d-18d3-40cd-8f78-8676792f1ff8)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Microsoft Game DVR 2026-04-10 18-48-16](https://github.com/user-attachments/assets/795f974d-18d3-40cd-8f78-8676792f1ff8)
 
 ![ecom6](https://github.com/user-attachments/assets/32ababe9-eef8-4767-9641-3a2956624e77)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![ecom7](https://github.com/user-attachments/assets/b8a549ca-338a-43a1-9eb7-eb24bd21b44c)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## ⚡ Genesis and Development
 
@@ -181,3 +60,7 @@ This command runs both services:
 - `artifacts/ecommerce/`: The React-Vite frontend application incorporating rich user experiences and 3D scenes.
 - `artifacts/api-server/`: The Express-based backend API handling data flow and processing.
 - `package.json` (Root): Manages concurrent scripts and global workspace configurations.
+
+## 📄 License
+
+This project is licensed under the MIT License.
