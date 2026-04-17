@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ShopWave-e-com-site
+    runtime: node
+    buildCommand: pnpm install --frozen-lockfile && PORT=3000 BASE_PATH=/ pnpm --filter @workspace/ecommerce run build && pnpm --filter @workspace/api-server run build
+    startCommand: node --enable-source-maps ./artifacts/api-server/dist/index.mjs
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: LOG_LEVEL
+        value: info
