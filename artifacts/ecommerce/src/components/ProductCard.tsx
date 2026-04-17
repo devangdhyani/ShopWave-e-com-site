@@ -2,6 +2,7 @@ import { ShoppingCart, Check } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import AddToCartToast from "./AddToCartToast";
 
 interface Product {
@@ -14,11 +15,13 @@ interface Product {
 
 export default function ProductCard({ product }: { product: Product }) {
   const { addToCart, cart } = useCart();
+  const navigate = useNavigate();
   const [added, setAdded] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const inCart = cart.some((item) => item.id === product.id);
 
-  const handleAdd = () => {
+  const handleAdd = (e: React.MouseEvent) => {
+    e.stopPropagation();
     addToCart(product);
     setAdded(true);
     setShowToast(true);
@@ -36,6 +39,7 @@ export default function ProductCard({ product }: { product: Product }) {
           boxShadow: "0px 20px 30px rgba(0,0,0,0.15)",
         }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        onClick={() => navigate(`/products/${product.id}`)}
         className="relative z-10 bg-card rounded-xl border border-border overflow-hidden group hover:border-primary/20"
         style={{ display: "block", cursor: "pointer" }}
       >
@@ -58,7 +62,7 @@ export default function ProductCard({ product }: { product: Product }) {
               ${product.price.toFixed(2)}
             </span>
             <motion.button
-              onClick={handleAdd}
+              onClick={handleAdd as any}
               whileTap={{ scale: 0.95 }}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${
                 added

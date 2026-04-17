@@ -1,21 +1,46 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 
+interface User {
+  email: string;
+  name: string;
+}
+
 interface AuthContextType {
   isAuthenticated: boolean;
-  login: () => void;
+  user: User | null;
+  login: (email: string) => void;
   logout: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export function AuthProvider({ children }: { children: ReactNode }) {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+const STORAGE_KEY = 'shopwave_user';
 
-  const login = () => setIsAuthenticated(true);
-  const logout = () => setIsAuthenticated(false);
+function getStoredUser(): User | null {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    return stored ? JSON.parse(stored) : null;
+  } catch {
+    return null;
+  }
+}
+
+export function AuthProvider({ children }: { children: ReactNode }) {
+  const [user, setUser] = useState<User | null>(getStoredUser);
+
+  const login = (email: string) => {
+    const newUser: User = { email, name: email.split('@')[0] };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(newUser));
+    setUser(newUser);
+  };
+
+  const logout = () => {
+    localStorage.removeItem(STORAGE_KEY);
+    setUser(null);
+  };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated: !!user, user, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
